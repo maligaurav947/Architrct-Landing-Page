@@ -1,0 +1,186 @@
+@import "componts/variables";
+@import "componts/reset";
+@import "componts/mixin";
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+body {
+  font-size: $body-font-size;
+  font-family: $title-font-family;
+}
+img {
+  object-fit: contain;
+  width: 100%;
+}
+nav {
+  background-color: $main-background-color;
+  position: sticky;
+  top: 0;
+  padding: 1.1em 0;
+  @include Flexcenter;
+  ul {
+    display: none;
+  }
+}
+section {
+  padding: 0.5em;
+}
+.home {
+  background-image: url(https://www.w3schools.com/w3images/architect.jpg);
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+  h2 {
+    font-size: $title-font-size;
+    span {
+      margin-right: 0.2em;
+      padding: 0 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+.project {
+  margin: 0.5em 0;
+  display: grid;
+  font-size: $title-font-size;
+  .project-images {
+    padding-top: 1.5em;
+    &__img {
+      padding: 0.5em 0;
+      position: relative;
+      h3 {
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        font-weight: 300;
+        top: 0px;
+        font-size: $info-font-size;
+        left: -37px;
+        padding: 0.35em;
+        position: absolute;
+        margin: 0 2em;
+      }
+    }
+  }
+}
+.about {
+  margin: 0.5em 0;
+  .about-text {
+    line-height: 1.5;
+    padding-bottom: 0.8em;
+    h3 {
+      font-size: $title-font-size;
+    }
+  }
+  .about-images {
+    &__img {
+      display: flex;
+      flex-direction: column;
+      padding: 0.9em 0;
+      h3 {
+        padding: 0.5em 0 0.3em;
+      }
+      h4 {
+        padding: 0.5em 0;
+        font-weight: 300;
+      }
+      .btn {
+        margin-top: 1.5em;
+        padding: 0.5em;
+        font-size: $info-font-size;
+        border: none;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.7);
+        }
+      }
+    }
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: $title-font-size;
+  }
+  img {
+    padding: 0.5em 0 1.5em;
+  }
+  h4 {
+    padding: 0.5em 0;
+    font-weight: 300;
+  }
+  input {
+    padding: 0.8em 0.2em;
+  }
+  .btn {
+    margin-top: 1.5em;
+    padding: 0.5em;
+    font-size: $info-font-size;
+    border: none;
+    margin-bottom: 1.5em;
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.7);
+    }
+  }
+}
+footer {
+  height: 9vh;
+  text-align: center;
+  background-color: black;
+  color: $main-background-color;
+  display: grid;
+  place-content: center;
+}
+@media screen and (min-width: 756px) {
+  nav {
+    padding: 1.5em 0.9em;
+    justify-content: space-between;
+    ul {
+      @include Flexcenter;
+      li {
+        padding: 0 0.8em;
+        a {
+          color: black;
+          &:hover {
+            color: blue;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .home {
+    height: 100vh;
+  }
+  .project {
+    .project-images {
+      width: 100%;
+      .row-1 {
+        display: flex;
+        .project-images__img {
+          margin: 0 0.2em;
+        }
+      }
+      .row-2 {
+        display: flex;
+        .project-images__img {
+          margin: 0 0.2em;
+        }
+      }
+    }
+  }
+  .about {
+    .about-images {
+      display: flex;
+      &__img {
+        margin: 0 0.2em;
+      }
+    }
+  }
+}

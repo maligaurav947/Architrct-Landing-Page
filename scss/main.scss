@@ -2,6 +2,28 @@
 @import "componts/reset";
 @import "componts/mixin";
 
+.dark-mode {
+  background-color: black;
+  h1,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a,
+  button,
+  nav {
+    background-color: black;
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  iframe {
+    filter: invert(100%);
+  }
+}
 p {
   font-weight: 200;
   color: #777;
@@ -45,12 +67,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: $main-background-color;
-  ;
-  
   padding: 15px;
   .navbar a {
     text-decoration: none;
-    color: black;
   }
   .logo {
     margin-right: 50px;
@@ -60,12 +79,26 @@ nav {
     display: flex;
     gap: 25px;
   }
-  
+}
+.li-dark-mode {
+  button {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    i {
+      font-size: 1.5em;
+      &:hover {
+        border-radius: 50%;
+        background-color: black;
+      }
+    }
+  }
 }
 #toogler,
-  .navbar label {
-    display: none;
-      }
+.navbar label {
+  display: none;
+}
 
 section {
   padding: 0.5em;
@@ -246,7 +279,6 @@ footer {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-
   }
   .list {
     flex-direction: column;
@@ -257,10 +289,10 @@ footer {
     display: inline-block;
     align-items: center;
     cursor: pointer;
-i{
-  font-size: 2.5rem;
-  margin-right: 0.5em;
-}
+    i {
+      font-size: 2.5rem;
+      margin-right: 0.5em;
+    }
   }
   #toogler:checked ~ .menu {
     max-height: 100%;

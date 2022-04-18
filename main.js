@@ -1,7 +1,4 @@
-`user strict`;
-/*const hamburgerMenu = document.querySelector(".hamburger");
-const menuIsActive = () => {
-  hamburgerMenu.classList.toggle(`active`);
-};
-hamburgerMenu.addEventListener(`Click`, menuIsActive);
-*/
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}

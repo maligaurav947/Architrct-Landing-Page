@@ -2,6 +2,13 @@
 @import "componts/reset";
 @import "componts/mixin";
 
+p {
+  font-weight: 200;
+  color: #777;
+}
+h4 {
+  font-weight: 300;
+}
 a {
   text-decoration: none;
 }
@@ -21,6 +28,7 @@ nav {
   position: sticky;
   top: 0;
   padding: 1.1em 0;
+
   @include Flexcenter;
   ul {
     display: none;
@@ -40,6 +48,7 @@ section {
   h2 {
     font-size: $title-font-size;
     span {
+      color: white;
       margin-right: 0.2em;
       padding: 0 0.5em;
       background-color: rgba(0, 0, 0, 0.5);
@@ -88,13 +97,15 @@ section {
       }
       h4 {
         padding: 0.5em 0;
-        font-weight: 300;
       }
       .btn {
         margin-top: 1.5em;
         padding: 0.5em;
         font-size: $info-font-size;
         border: none;
+
+        font-weight: 200;
+        cursor: pointer;
         &:hover {
           background-color: rgba(128, 128, 128, 0.7);
         }
@@ -113,17 +124,27 @@ section {
   }
   h4 {
     padding: 0.5em 0;
-    font-weight: 300;
   }
+
   input {
+    border: none;
+    outline: none;
+    margin: 0.2em 0;
+    width: 45%;
     padding: 0.8em 0.2em;
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid black;
+    }
   }
   .btn {
     margin-top: 1.5em;
-    padding: 0.5em;
+    padding: 0.8em 1em;
     font-size: $info-font-size;
     border: none;
+    font-weight: 200;
     margin-bottom: 1.5em;
+    cursor: pointer;
     &:hover {
       background-color: rgba(128, 128, 128, 0.7);
     }

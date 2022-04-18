@@ -10,6 +10,7 @@ h4 {
   font-weight: 300;
 }
 a {
+  color: #777;
   text-decoration: none;
 }
 li {
@@ -23,6 +24,7 @@ img {
   object-fit: contain;
   width: 100%;
 }
+/*
 nav {
   background-color: $main-background-color;
   position: sticky;
@@ -33,7 +35,38 @@ nav {
   ul {
     display: none;
   }
+}*/
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 1.1em 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $main-background-color;
+  ;
+  
+  padding: 15px;
+  .navbar a {
+    text-decoration: none;
+    color: black;
+  }
+  .logo {
+    margin-right: 50px;
+  }
+  .list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
 }
+#toogler,
+  .navbar label {
+    display: none;
+      }
+
 section {
   padding: 0.5em;
 }
@@ -203,5 +236,33 @@ footer {
         margin: 0 0.2em;
       }
     }
+  }
+}
+
+//media queries of navbar
+
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-block;
+    align-items: center;
+    cursor: pointer;
+i{
+  font-size: 2.5rem;
+  margin-right: 0.5em;
+}
+  }
+  #toogler:checked ~ .menu {
+    max-height: 100%;
   }
 }

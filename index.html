@@ -7,17 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architrct</title>
   <link rel="stylesheet" href="./dist/css/main.css">
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/491ef358ed.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <nav>
-    <div class="logo"><b>BR</b> Architects</div>
-    <ul class="nav-links">
-      <li><a href="">Project</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
+  <nav class="navbar">
+    <a href="#" class="logo"> <span><b>BR</b></span>Architects</a>
+    <input type="checkbox" id="toogler">
+    <label for="toogler">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="menu">
+      <ul class="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
   </nav>
   <main>
     <section class="home">
@@ -133,6 +141,7 @@
   <footer>
     <div class="footer-text">&copy;Mali Gaurav</div>
   </footer>
+<script src="./main.js"></script>
 </body>
 
 </html>

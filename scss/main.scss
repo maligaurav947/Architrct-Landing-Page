@@ -12,10 +12,9 @@
   p,
   li,
   a,
-  button,
   nav {
     background-color: black;
-    color: white;
+    color: #777;
   }
   h2 {
     color: white;
@@ -68,6 +67,7 @@ nav {
   justify-content: space-between;
   background-color: $main-background-color;
   padding: 15px;
+  z-index:999;
   .navbar a {
     text-decoration: none;
   }
